@@ -23,10 +23,14 @@ from openerp import models, fields, api, _
 from openerp.tools.safe_eval import safe_eval
 from openerp.exceptions import Warning
 import logging
-# Lib for phone number reformating -> pip install phonenumbers
-import phonenumbers
 
 _logger = logging.getLogger(__name__)
+
+# Lib for phone number reformating -> pip install phonenumbers
+try:
+    import phonenumbers
+except ImportError:
+    _logger.debug('Cannot import phonenumbers')
 
 
 class PhoneCommon(models.AbstractModel):
@@ -49,6 +53,8 @@ class PhoneCommon(models.AbstractModel):
             user = self.pool['res.users'].browse(cr, uid, uid, context=context)
             # country_id on res.company is a fields.function that looks at
             # company_id.partner_id.addres(default).country_id
+            if self._country_field in vals and isinstance(vals[self._country_field], (str, unicode)):
+                vals[self._country_field] = int(vals[self._country_field])
             countrycode = None
             if self._country_field:
                 if vals.get(self._country_field):

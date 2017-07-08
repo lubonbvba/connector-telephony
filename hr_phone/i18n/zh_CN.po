@@ -7,24 +7,24 @@ msgid ""
 msgstr ""
 "Project-Id-Version: connector-telephony (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-14 02:09+0000\n"
+"POT-Creation-Date: 2017-06-24 19:57+0000\n"
 "PO-Revision-Date: 2015-10-12 18:37+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
-"Language-Team: English (http://www.transifex.com/oca/OCA-connector-telephony-8-0/language/en/)\n"
+"Last-Translator: <>\n"
+"Language-Team: Chinese (China) (http://www.transifex.com/oca/OCA-connector-telephony-8-0/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: en\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #. module: hr_phone
 #: model:ir.model,name:hr_phone.model_hr_employee
 msgid "Employee"
-msgstr "Employee"
+msgstr ""
 
 #. module: hr_phone
 #: view:hr.employee:hr_phone.view_employee_form
 #: view:hr.employee:hr_phone.view_employee_tree
 #: view:hr.employee:hr_phone.view_partner_tree2
 msgid "phone"
-msgstr "phone"
+msgstr "电话"
